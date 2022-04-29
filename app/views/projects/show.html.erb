@@ -11,14 +11,15 @@
     <li class="button-60", class="text-center">
       <%= link_to 'Back', projects_path %>
     </li>
-    <% if current_user.email == "test@user1.com" %>
-      <li class="button-60", class="text-center">
-        <%= link_to 'Edit', edit_project_path(@project) %>
-      </li>
-      <li class="button-60", class="text-center">
-        <%= link_to 'Delete', @project, method: :delete, data: { confirm: 'Are you sure?' } %>
-      </li>
+    <% if user_signed_in? %>
+      <% if current_user.email == "test@user1.com" %>
+        <li class="button-60", class="text-center">
+          <%= link_to 'Edit', edit_project_path(@project) %>
+        </li>
+        <li class="button-60", class="text-center">
+          <%= link_to 'Delete', @project, method: :delete, data: { confirm: 'Are you sure?' } %>
+        </li>
+      <%end%>
     <%end%>
-    
 	</div>
 </div>
