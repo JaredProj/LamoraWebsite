@@ -11,13 +11,12 @@
             <h4 style="text-align:center;"><%= project.title %></h4>
             <p style="text-align:center;"><%= project.description %></p>
             <br>
-            <% if user_signed_in? %>
+            
             <div class="text-center">
               <li class="button-60", style="text-center;">
                 <%= link_to 'Show', project %>
               </li>
             </div>
-            <%end%>
       </div>
     <% end %>
     </div>
