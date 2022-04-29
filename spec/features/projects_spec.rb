@@ -6,7 +6,6 @@ def newUser
 end
 
 RSpec.feature "Projects", type: :feature do
-  
   context "Create new project" do
     before(:each) do
       newUser
@@ -57,7 +56,8 @@ RSpec.feature "Projects", type: :feature do
     scenario "remove project" do
       newUser
       visit projects_path
-      click_link "Destroy"
+      click_link "Show"
+      click_link "Delete"
       expect(page).to have_content("Project was successfully destroyed")
       expect(Project.count).to eq(0)
     end

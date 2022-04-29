@@ -1,28 +1,27 @@
+<%= render 'projects/jumbotron' %>
 <p id="notice"><%= notice %></p>
-<h1>Projects</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Description</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @projects.each do |project| %>
-      <tr>
-        <td><%= project.title %></td>
-        <td><%= project.description %></td>
-        <td><%= link_to 'Show', project %></td>
-        <td><%= link_to 'Edit', edit_project_path(project) %></td>
-        <td><%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
+<h1 style="text-align:center;">Projects</h1>
 <br>
 
-<%= link_to 'New Project', new_project_path %>
+
+
+  <div class="flexBox">
+    <% @projects.each do |project| %>
+      <div class="container2 containerWidth rounded">
+            <h4 style="text-align:center;"><%= project.title %></h4>
+            <p style="text-align:center;"><%= project.description %></p>
+            <br>
+            <% if user_signed_in? %>
+            <div class="text-center">
+              <li class="button-60", style="text-center;">
+                <%= link_to 'Show', project %>
+              </li>
+            </div>
+            <%end%>
+      </div>
+    <% end %>
+    </div>
+
+
+
+<br>
