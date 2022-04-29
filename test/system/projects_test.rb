@@ -5,12 +5,12 @@ class ProjectsTest < ApplicationSystemTestCase
     @project = projects(:one)
   end
 
-  test "visiting the index" do
+  test "Visiting the index" do
     visit projects_url
     assert_selector "h1", text: "Projects"
   end
 
-  test "creating a Project" do
+  test "Creating a Project" do
     visit projects_url
     click_on "New Project"
 
@@ -22,7 +22,7 @@ class ProjectsTest < ApplicationSystemTestCase
     click_on "Back"
   end
 
-  test "updating a Project" do
+  test "Updating a Project" do
     visit projects_url
     click_on "Edit", match: :first
 
@@ -34,7 +34,7 @@ class ProjectsTest < ApplicationSystemTestCase
     click_on "Back"
   end
 
-  test "destroying a Project" do
+  test "Destroying a Project" do
     visit projects_url
     page.accept_confirm do
       click_on "Destroy", match: :first

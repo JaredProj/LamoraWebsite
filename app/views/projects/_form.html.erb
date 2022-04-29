@@ -2,7 +2,6 @@
   <% if project.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(project.errors.count, "error") %> prohibited this project from being saved:</h2>
-
       <ul>
       <% project.errors.full_messages.each do |message| %>
         <li><%= message %></li>
@@ -10,18 +9,25 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
+  <div class="field", style="text-align:center;">
     <%= form.label :title %>
+    <br>
     <%= form.text_field :title %>
   </div>
-
-  <div class="field">
+  <div class="field", style="text-align:center;">
     <%= form.label :description %>
+    <br>
+    <div class="container2">
     <%= form.text_area :description %>
+
+    </div>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <div class="container">
+	    <div class="text-center" style="background-color:#ffffff;">
+          <%= form.submit %>
+    	</div>
+    </div>
   </div>
 <% end %>
