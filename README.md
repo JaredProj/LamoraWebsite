@@ -1,24 +1,5 @@
-# README
+READ ME
+This is the files that were used/developed/edited to sucessfully boot up a website using continous integration, bootstrap, and other tools/softwares 
+like heroku and docker.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
